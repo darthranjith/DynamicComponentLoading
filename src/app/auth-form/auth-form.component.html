@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header">Login</div>
+  <div class="card-body">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="Email">Email address</label>
+        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" placeholder="Password" formControlName="password">
+      </div>
+      <div class="form-group">
+        <label for="RememberMe">
+          <input id="RememberMe" formControlName="rememberme" type="checkbox">
+          Remember Me
+        </label>
+      </div>
+
+      <!-- <app-auth-message *ngIf="showMessage"></app-auth-message> -->
+      <!-- This ng-template acts as a container to hold the component dynamically -->
+      <ng-template #entry></ng-template>
+
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</div>
